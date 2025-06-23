@@ -1,0 +1,19 @@
+<Page loaded="onLoad">
+
+  <ActionBar title="Expenses" />
+
+  <StackLayout class="p-4">
+
+    <GridLayout columns="*, *" rows="50, 50">
+      <Label text="Description of Expense: " textAlignment="center" col="0" row="0" />
+      <Label text="Cost" textAlignment="center" col="1" row="0" />
+
+      <TextField text="{{description}}" hint="Add a description" col="0" row="1" />
+      <TextField id="cost" text="{{cost}}" hint="Add cost" col="1" row="1" />
+    </GridLayout>
+
+    <Button text="Save" tap="update" />
+
+  </StackLayout>
+
+</Page>

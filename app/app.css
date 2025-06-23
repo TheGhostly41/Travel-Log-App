@@ -1,0 +1,32 @@
+@import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+Button.-primary {
+  font-size: 18;
+}
+
+.titleLabel {
+  font-size: 25;
+  font-weight: bold;
+  color: white;
+}
+
+.miniTitle {
+  font-size: 17;
+  font-weight: bold;
+  color: white;
+}
+
+.textField {
+  color: white;
+  font-size: 15;
+}
+
+.textView {
+  color: white;
+  font-size: 12;
+}

@@ -1,0 +1,50 @@
+<Page loaded="onLoad">
+
+<ActionBar title="Expense List" backgroundColor="#23232b" />
+
+  <StackLayout class="p-4" backgroundColor="#23232b">
+
+    <Label text="Expense List: " fontWeight="bold" fontSize="30" color="white" />
+
+    <ListView items="{{expenses}}" itemTap="onItemTap" height="60%">
+      <ListView.itemTemplate>
+
+        <GridLayout columns="40, *" backgroundColor="#264653" borderRadius="15">
+
+          <Label text="{{id}}" 
+          color="white" textAlignment="center" fontSize="20" fontWeight="bold" 
+          backgroundColor="#E76F51" borderRadius="5" col="0" />
+
+          <GridLayout col="1" rows="*,*" class="p-4">
+            <Label text="{{'$ ' + cost}}" row="0" 
+              textWrap="true" fontWeight="bold" color="white" 
+              textAlginment="center" fontSize="20" />
+
+            <Label text="{{description}}" row="1" fontWeight="bold" color="white" textAlginment="left" fontSize="12" />
+          </GridLayout>
+
+        </GridLayout>
+
+      </ListView.itemTemplate>
+    </ListView>
+
+    <FlexboxLayout justifyContent="space-around">
+      <Label class="titleLabel" text="Total Cost: " />
+      <Label class="titleLabel" text="{{'$ ' + total}}" />
+    </FlexboxLayout>
+
+    <FlexboxLayout justifyContent="space-around">
+      <Button text="<-" tap="goBack"
+        borderRadius="20" width="50" height="50" 
+        color="white" backgroundColor="#F4A261"
+        fontSize="30" textAlignment="center" />
+
+      <Button text="+" tap="addNew"
+        borderRadius="20" width="50" height="50" 
+        color="white" backgroundColor="#F4A261"
+        fontSize="30" textAlignment="center" />
+    </FlexboxLayout>
+
+  </StackLayout>
+
+</Page>

@@ -1,0 +1,64 @@
+<Page loaded="onLoad">
+
+  <ActionBar title="Details" backgroundColor="#23232b" color="white" />
+
+  <ScrollView>
+    <StackLayout class="p-4" backgroundColor="#23232b">
+
+      <!--ID label-->
+      <WrapLayout color="#FFD700">
+        <Label text="Travel Log: " fontWeight="bold" fontSize="30" />
+        <Label text="{{id}}" fontWeight="bold" fontSize="30" />
+      </WrapLayout>
+
+      <!--Title-->
+      <Label class="titleLabel" text="Title: " />
+      <TextField class="textField" text="{{title}}" hint="Add a Title" width="75%" horizontalAlignment="left" />
+
+      <!--Date-->
+      <Label class="titleLabel" text="Date: " />
+      <DatePicker date="{{date}}" backgroundColor="white" borderRadius="20" width="300" />
+      <Label text="{{date}}" textAlignment="center" />
+
+      <!--Companions-->
+      <Label class="titleLabel" text="Companions: " />
+      <TextView class="textView" text="{{companions}}" hint="Add people who joined the trip!" />
+
+      <!--Places Visited-->
+      <Label class="titleLabel" text="Places Visited: " />
+
+      <!--Places Visited 1-->
+      <Label class="miniTitle" text="Place Name: " />
+      <TextField class="textField" text="{{placesVisited1}}" hint="Add a place you've visited" />
+
+      <Label class="miniTitle" text="Place Description: " />
+      <TextView class="textView" text="{{description1}}" hint="Add a description" />
+
+      <!--Places Visited 2-->
+      <Label class="miniTitle" text="Place Name: " />
+      <TextField class="textField" text="{{placesVisited2}}" hint="Add a place you've visited" />
+
+      <Label class="miniTitle" text="Place Description: " />
+      <TextView class="textView" text="{{description2}}" hint="Add a description" />
+
+      <!--Comments-->
+      <Label class="titleLabel" text="Comments / Special Memories: " textWrap="true" />
+      <TextView class="textView" text="{{comments}}" hint="Add memories you've made!" />
+
+      <!--Images-->
+      <Image src="{{img}}" />
+      <Image src="{{img2}}" />
+
+      <!--Save Button-->
+      <Button text="Save" tap="update" 
+        color="white" borderRadius="5" fontSize="20" fontWeight="bold"
+        backgroundColor="#F4A261" />
+
+      <!--Expense Button-->
+      <Button text="Expense Page" tap="viewExpense" 
+        color="white" borderRadius="5" fontSize="20" width="150"
+        backgroundColor="#264653" />
+
+    </StackLayout>
+  </ScrollView>
+</Page>
